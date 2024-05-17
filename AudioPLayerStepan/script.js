@@ -2,7 +2,7 @@ let data = {
     title: [
         "Macan & AVG - Спой",
          "Macan - Май", 
-         "Tupac Shakur - All Eyez On Me", 
+         "Tupac - All Eyez On Me", 
          "Miyagi & Andy Panda - Minor"],
     song: [
         "music/AVG_MACAN_-_Spojj_77373130.mp3", 
@@ -10,7 +10,11 @@ let data = {
         "music/allEyeseOnMe.mp3", 
         "music/minor.mp3"
     ],
-    poster: ['https://images.genius.com/41608d095caf37d11f8206d6f176582d.1000x1000x1.png', 'https://t2.genius.com/unsafe/680x680/https%3A%2F%2Fimages.genius.com%2Fe1061ac336b067bb9199554615d42905.1000x1000x1.jpg', 'https://blackculturetv.files.wordpress.com/2019/02/all-eyez-on-me.jpg', 'https://i1.sndcdn.com/artworks-USwDbsvFhel8jjv9-iJ97kQ-t500x500.jpg']
+    poster: [
+        'https://images.genius.com/41608d095caf37d11f8206d6f176582d.1000x1000x1.png', 
+        'https://t2.genius.com/unsafe/680x680/https%3A%2F%2Fimages.genius.com%2Fe1061ac336b067bb9199554615d42905.1000x1000x1.jpg',
+         'https://blackculturetv.files.wordpress.com/2019/02/all-eyez-on-me.jpg', 'https://i1.sndcdn.com/artworks-USwDbsvFhel8jjv9-iJ97kQ-t500x500.jpg'
+        ]
 }
 
 
@@ -34,15 +38,15 @@ window.onload = function () {
 }
 
 
-
 function playOrPauseSong() {
      play = document.getElementById("play")
     if (song.paused) {
         song.play();
-        play.src = "images/pause.png"
+        play.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1wYXVzZSI+PHJlY3QgeD0iMTQiIHk9IjQiIHdpZHRoPSI0IiBoZWlnaHQ9IjE2IiByeD0iMSIvPjxyZWN0IHg9IjYiIHk9IjQiIHdpZHRoPSI0IiBoZWlnaHQ9IjE2IiByeD0iMSIvPjwvc3ZnPg=="
+
     } else {
         song.pause();
-        play.src = "images/play-button-arrowhead.png"
+        play.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1wbGF5Ij48cG9seWdvbiBwb2ludHM9IjYgMyAyMCAxMiA2IDIxIDYgMyIvPjwvc3ZnPg=="
     }
 }
 
@@ -100,4 +104,33 @@ function prev(){
     }
     playSong()
    }
-   
+
+
+
+       let mutes = document.getElementById("mute");
+
+   function mute(){
+       if(song.muted){
+           song.muted = false
+            mutes.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS12b2x1bWUtMSI+PHBvbHlnb24gcG9pbnRzPSIxMSA1IDYgOSAyIDkgMiAxNSA2IDE1IDExIDE5IDExIDUiLz48cGF0aCBkPSJNMTUuNTQgOC40NmE1IDUgMCAwIDEgMCA3LjA3Ii8+PC9zdmc+"
+        }else{
+            song.muted = true
+            mutes.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAwMDAiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS12b2x1bWUteCI+PHBvbHlnb24gcG9pbnRzPSIxMSA1IDYgOSAyIDkgMiAxNSA2IDE1IDExIDE5IDExIDUiLz48bGluZSB4MT0iMjIiIHgyPSIxNiIgeTE9IjkiIHkyPSIxNSIvPjxsaW5lIHgxPSIxNiIgeDI9IjIyIiB5MT0iOSIgeTI9IjE1Ii8+PC9zdmc+"
+        }
+   }
+
+
+
+   function decrease(){
+       let decrease = document.getElementById("decrease");
+       song.volume -= 0.2;
+
+       if(song.volume <= 0){
+       mutes.src = "images/volume.png"
+    }
+   }
+
+   function increase(){
+       let increase = document.getElementById("increase")
+       song.volume += 0.2
+   }
