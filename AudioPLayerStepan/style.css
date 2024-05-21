@@ -127,14 +127,15 @@ body {
 }
 
 .handle {
-    width: 80%;
+    width: 70%;
     height: 10px;
     background: #2e424b;
+    border-radius: 10px;
 }
 
 .fill {
-    height: 12px;
-    width: 12px;
+    height: 14px;
+    width: 14px;
     border-radius: 50px;
     background-color: white;
     z-index: 999;
@@ -148,4 +149,6 @@ body {
     margin-top: -25px;
     color: white;
 }
+
+
 
