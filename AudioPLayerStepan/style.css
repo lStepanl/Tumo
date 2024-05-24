@@ -28,7 +28,7 @@ body {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    width: 403px;
+    width: 363px;
     height: 570px;
     border-radius: 15px;
     overflow: hidden;
@@ -37,31 +37,40 @@ body {
 
 .row1 {
     background-image: url('https://www.attico36.com/wp-content/uploads/2018/03/b1.gif');
-    width: 100%;
-    height: 40%;
+    width: 256px;
+    height: 42%;
     background-size: cover;
     background-position-y: 40%;
     background-position-x: 40%;
+    margin: 10px auto;
+    border-radius: 15px;
+    margin-top: 35px;
 }
 
-.songtitle {
-   color: black;
+.songtitle{
+    color: black;
     height: 10%;
     width: 100%;
-    text-align: center;
+    text-align: left;
     font-family: monospace;
     font-size: 31px;
     font-family: "Jersey 15", sans-serif;
-    background-color: #ffffff24;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-left: 23px;
+    margin-top: 20px;
+}
 
+.authorsong{
+    color:black;
+    opacity: 0.7;
+    margin-left: 23px;
 }
 
 .row2 {
     width: 100%;
-    height: 50%;
+    height: 30%;
 }
 
 .play {
@@ -74,7 +83,7 @@ body {
 }
 
 .play img {
-    width: 50px;
+    width: 45px;
     margin-top: 20px;
 }
 
@@ -96,24 +105,35 @@ body {
 }
 
 #decrease{
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
     background-size: cover;
     margin: 5px;
+    transition: 0.5s;
 }
+#decrease:active{
+    transform: scale(1.1);
+}
+#increase:active{
+    transform: scale(1.1);
+}
+#mute:active{
+    transform: scale(1.1);
 
+}
 #mute{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     background-size: cover;
     margin: 5px;
 }
 
 #increase{
-    height: 35px;
-    width: 35px;
+    height: 25px;
+    width: 25px;
     background-size: cover;
     margin: 5px;
+    transition: 0.5s;
 }
 
 
@@ -124,20 +144,21 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 12px;
+    
 }
 
 .handle {
-    width: 70%;
-    height: 10px;
-    background: #2e424b;
+    width: 65%;
+    height: 9px;
+    background: #000000cb;
     border-radius: 10px;
 }
 
 .fill {
-    height: 14px;
-    width: 14px;
+    height: 13px;
+    width: 13px;
     border-radius: 50px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.865);
     z-index: 999;
     margin-top: -1.5px;
 }
@@ -147,7 +168,24 @@ body {
     height: 100%;
     margin-left: 35px;
     margin-top: -25px;
-    color: white;
+    color: black;
+}
+
+
+#next:active{
+    transform: scale(1.1);
+}
+#prev:active{
+    transform: scale(1.1);
+}
+#play:active{
+    transform: scale(1.1);
+
+}
+
+#next,#play,#prev{
+    transition: 0.5s;
+
 }
 
 
